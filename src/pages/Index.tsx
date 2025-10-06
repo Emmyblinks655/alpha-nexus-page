@@ -58,48 +58,40 @@ const Index = () => {
 
   const values = [
     {
-      icon: Lightbulb,
-      title: "Innovation",
-      description: "We constantly push boundaries to deliver cutting-edge solutions"
+      icon: Users,
+      title: "Collaboration",
+      description: "Working together to achieve more than we could alone"
     },
     {
       icon: Shield,
       title: "Integrity",
-      description: "Trust and transparency form the foundation of everything we do"
+      description: "Trust and transparency in everything we do"
     },
     {
-      icon: Users,
-      title: "Collaboration",
-      description: "We believe in the power of partnership and teamwork"
-    },
-    {
-      icon: TrendingUp,
-      title: "Excellence",
-      description: "We strive for excellence in every project we undertake"
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "Constantly pushing boundaries to deliver cutting-edge solutions"
     }
   ];
 
   const work = [
     {
-      title: "Tech Solutions",
-      description: "Developing custom software, mobile apps, and digital platforms that transform businesses."
+      title: "Education",
+      description: "Automated admissions — exam scoring, admission processing, and student onboarding for schools in Nigeria."
     },
     {
-      title: "Educational Programs",
-      description: "Creating accessible learning opportunities and training programs for diverse communities."
+      title: "Tech & Business",
+      description: "Training and client-matching support for learners and members."
     },
     {
-      title: "Healthcare Initiatives",
-      description: "Implementing health awareness campaigns and accessible medical support systems."
-    },
-    {
-      title: "Business Consulting",
-      description: "Providing strategic guidance to help businesses scale and achieve sustainable growth."
+      title: "Health",
+      description: "R&D for breakthrough treatments to tackle major illnesses."
     }
   ];
 
-  const telegramHotline = "https://t.me/your_hotline"; // Replace with actual Telegram link
-  const telegramCommunity = "https://t.me/your_community"; // Replace with actual Telegram link
+  const telegramHotline = "https://t.me/Alphahotline";
+  const telegramCommunity = "https://t.me/alphalimited";
+  const emailContact = "alphalhubimited@gmail.com";
 
   return (
     <div className="min-h-screen">
@@ -201,23 +193,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Initial Brief Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-[hsl(var(--primary)/0.05)] to-[hsl(var(--accent)/0.05)] border-y border-border">
+        <div className="container mx-auto max-w-5xl">
+          <Card className="shadow-medium border-2 border-primary/20">
+            <CardContent className="pt-8 pb-8">
+              <div className="flex items-start gap-4">
+                <div className="bg-primary/10 p-3 rounded-xl flex-shrink-0">
+                  <Lightbulb className="h-7 w-7 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-3 text-primary">About This Website</h3>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    This website was built based on Alpha's initial vision — a simple, polished one-page site with 
+                    professional UI, clear CTAs that redirect to Telegram, and no database. Our goal is to show the world 
+                    that we don't just talk — we solve.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* About Us */}
       <section id="about" className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">About Alpha</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              Alpha is a dynamic organization dedicated to creating meaningful impact across multiple sectors. 
-              We bring together expertise, innovation, and passion to deliver comprehensive solutions that 
-              address the evolving needs of our communities.
+            <p className="font-medium text-foreground text-xl">
+              Alpha is a hub of solutions transforming lives and businesses across Tech, Education, Health, and Business. 
+              We don't just talk — we solve problems.
             </p>
             <p>
-              Through our integrated approach spanning Technology, Education, Health, and Business, we create 
-              synergies that drive sustainable growth and positive change. Our diverse team of professionals 
-              works collaboratively to transform challenges into opportunities.
-            </p>
-            <p className="font-medium text-foreground">
-              Together, we're building a future where innovation meets purpose, and communities thrive.
+              From automating school admissions in Nigeria to teaching and supporting learners, helping members get clients, 
+              and developing groundbreaking healthcare solutions — Alpha makes real impact.
             </p>
           </div>
         </div>
@@ -237,9 +247,8 @@ const Index = () => {
                   <h3 className="text-3xl font-bold">Our Vision</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  To be the leading catalyst for holistic development, creating a world where technology, 
-                  education, health, and business converge to build thriving, empowered communities that 
-                  drive innovation and sustainable progress.
+                  To become a central hub of solutions, helping individuals and companies across multiple sectors — 
+                  not just a company, but a place where real problems are solved.
                 </p>
               </CardContent>
             </Card>
@@ -253,9 +262,8 @@ const Index = () => {
                   <h3 className="text-3xl font-bold">Our Mission</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  To deliver innovative, accessible, and high-quality solutions across technology, education, 
-                  health, and business sectors. We are committed to fostering collaboration, driving excellence, 
-                  and creating lasting positive impact in every community we serve.
+                  Innovating across Tech, Education & Health | Building solutions that solve real problems | 
+                  Partnering with schools & businesses to shape the future.
                 </p>
               </CardContent>
             </Card>
@@ -272,7 +280,7 @@ const Index = () => {
               The principles that guide every decision we make and action we take
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
@@ -325,33 +333,66 @@ const Index = () => {
       <section className="py-24 px-4 bg-gradient-to-br from-[hsl(var(--primary))] to-[hsl(var(--accent))] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Build Something Great Together</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
             Whether you want to partner with us, support our mission, or join our growing community, 
             we'd love to hear from you.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          
+          {/* Contact Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button asChild size="lg" variant="cta" className="bg-white text-primary hover:bg-white/90 shadow-xl">
               <a href={telegramHotline} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
-                Partner with Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="ctaOutline" className="border-2 border-white text-white hover:bg-white hover:text-primary shadow-lg">
-              <a href={telegramHotline} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Sponsor Us
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Telegram Hotline
               </a>
             </Button>
             <Button asChild size="lg" className="bg-accent text-white hover:bg-accent/90 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
               <a href={telegramCommunity} target="_blank" rel="noopener noreferrer">
                 <Users className="mr-2 h-5 w-5" />
-                Join Our Community
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Join Community
               </a>
             </Button>
+            <Button asChild size="lg" variant="ctaOutline" className="border-2 border-white text-white hover:bg-white hover:text-primary shadow-lg">
+              <a href={`mailto:${emailContact}`}>
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Email Us
+              </a>
+            </Button>
+          </div>
+
+          {/* Contact Details */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+            <div className="grid md:grid-cols-3 gap-6 text-left">
+              <div className="flex flex-col items-center text-center">
+                <div className="bg-white/20 p-4 rounded-xl mb-3">
+                  <MessageCircle className="h-6 w-6" />
+                </div>
+                <h4 className="font-semibold mb-2">Telegram Hotline</h4>
+                <a href={telegramHotline} target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white transition-colors">
+                  @Alphahotline
+                </a>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <div className="bg-white/20 p-4 rounded-xl mb-3">
+                  <Users className="h-6 w-6" />
+                </div>
+                <h4 className="font-semibold mb-2">Community</h4>
+                <a href={telegramCommunity} target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white transition-colors break-all">
+                  t.me/alphalimited
+                </a>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <div className="bg-white/20 p-4 rounded-xl mb-3">
+                  <MessageCircle className="h-6 w-6" />
+                </div>
+                <h4 className="font-semibold mb-2">Email</h4>
+                <a href={`mailto:${emailContact}`} className="text-white/90 hover:text-white transition-colors break-all">
+                  {emailContact}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
